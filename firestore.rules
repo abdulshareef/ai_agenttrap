@@ -1,0 +1,9 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // ai_agenttrap data is written only by the Cloud Run backend (service account bypasses rules).
+    match /agenttrap_events/{d} { allow read, write: if false; }
+    match /agenttrap_meta/{d}   { allow read, write: if false; }
+    match /agenttrap_intel/{d}  { allow read, write: if false; }
+  }
+}
