@@ -1,0 +1,19 @@
+{
+  "hosting": {
+    "public": "public",
+    "rewrites": [
+      { "source": "/_at/**",                  "run": { "serviceId": "agenttrap", "region": "asia-south1" } },
+      { "source": "/staff-portal",            "run": { "serviceId": "agenttrap", "region": "asia-south1" } },
+      { "source": "/staff-portal/**",         "run": { "serviceId": "agenttrap", "region": "asia-south1" } },
+      { "source": "/internal/**",             "run": { "serviceId": "agenttrap", "region": "asia-south1" } },
+      { "source": "/admin-backup/**",         "run": { "serviceId": "agenttrap", "region": "asia-south1" } },
+      { "source": "/.env",                    "run": { "serviceId": "agenttrap", "region": "asia-south1" } },
+      { "source": "/.git/**",                 "run": { "serviceId": "agenttrap", "region": "asia-south1" } },
+      { "source": "/wp-login.php",            "run": { "serviceId": "agenttrap", "region": "asia-south1" } },
+      { "source": "/xmlrpc.php",              "run": { "serviceId": "agenttrap", "region": "asia-south1" } },
+      { "source": "/phpmyadmin/**",           "run": { "serviceId": "agenttrap", "region": "asia-south1" } },
+      { "source": "/.well-known/ai-agent.json","run": { "serviceId": "agenttrap", "region": "asia-south1" } }
+    ]
+  },
+  "firestore": { "rules": "firestore.rules" }
+}
